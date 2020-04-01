@@ -11,6 +11,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open",
+    "start-server": "node server/src/server.js",
     "test": "jest"
   },
   "keywords": [],
