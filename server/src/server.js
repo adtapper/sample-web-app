@@ -1,10 +1,15 @@
 const express = require('express');
+var cors = require('cors');
+const bodyParser = require('body-parser');
+const routes = require('./index');
+
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
-app.post('/interest', function (req, res) {
-    res.send('POST request to the homepage')
-})
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors({
+    origin: 'http://localhost:8080'
+  }));
+app.use('/', routes);
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+module.exports = app;
