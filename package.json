@@ -12,7 +12,8 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "start-server": "node server/src/start.js",
-    "test": "jest"
+    "test": "jest \".*.test.js\" && protractor client/ui-test/conf.js",
+    "update-driver": "webdriver-manager update"
   },
   "keywords": [],
   "author": "",
@@ -40,6 +41,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
+    "protractor": "^5.4.3",
     "style-loader": "^1.0.0",
     "supertest": "^4.0.2",
     "webpack": "^4.39.2",
