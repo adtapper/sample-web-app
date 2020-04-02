@@ -25,14 +25,14 @@ export const App = () => {
     }
   }
 
-  const calculateInterest = () => {
+  const calculatePayment = () => {
     const body = {
       rate,
       term,
       principal
     };
  
-    fetch('http://localhost:5000/interest', {
+    fetch('http://localhost:5000/payment', {
             method: 'post',
             body:    JSON.stringify(body),
             headers: { 'Content-Type': 'application/json' },
@@ -61,7 +61,7 @@ export const App = () => {
           </select>
           <label>Interest Rate</label>
           <input id = 'interest' type="number" maxLength="3" placeholder="0" min="0" step="0.1" onChange={updateRate}></input>
-          <input id = 'button' type='button' value='Calculate Interest' onClick={calculateInterest}></input>
+          <input id = 'button' type='button' value='Calculate Interest' onClick={calculatePayment}></input>
         </form>
       </div>
     </div>

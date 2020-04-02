@@ -1,7 +1,7 @@
 const Router = require('express').Router;
-const InterestController = require('./controllers/interest-controller.js');
+const PaymentController = require('./controllers/payment-controller.js');
 const routes = Router();
 
-routes.post('/interest', InterestController.calculateInterest);
+routes.post('/payment', PaymentController.calculatePayment);
 
 module.exports = routes;

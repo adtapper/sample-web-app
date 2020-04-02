@@ -41,7 +41,7 @@ describe('App', () => {
             button.simulate('click');
     
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0,\"term\":10,\"principal\":0}",
                     "headers": {"Content-Type": "application/json"},
@@ -61,7 +61,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0,\"term\":10,\"principal\":0}",
                     "headers": {"Content-Type": "application/json"},
@@ -79,7 +79,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0,\"term\":10,\"principal\":0}",
                     "headers": {"Content-Type": "application/json"},
@@ -97,7 +97,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0,\"term\":10,\"principal\":342}",
                     "headers": {"Content-Type": "application/json"},
@@ -123,7 +123,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": `{\"rate\":0,\"term\":${term},\"principal\":0}`,
                     "headers": {"Content-Type": "application/json"},
@@ -143,7 +143,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0,\"term\":10,\"principal\":0}",
                     "headers": {"Content-Type": "application/json"},
@@ -161,7 +161,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0,\"term\":10,\"principal\":0}",
                     "headers": {"Content-Type": "application/json"},
@@ -179,7 +179,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0.023,\"term\":10,\"principal\":0}",
                     "headers": {"Content-Type": "application/json"},
@@ -210,7 +210,7 @@ describe('App', () => {
             button.simulate('click');
 
             expect(fetch).toHaveBeenCalledWith(
-                "http://localhost:5000/interest",
+                "http://localhost:5000/payment",
                 {
                     "body": "{\"rate\":0.047,\"term\":20,\"principal\":518}",
                     "headers": {"Content-Type": "application/json"},

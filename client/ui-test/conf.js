@@ -1,5 +1,5 @@
 exports.config = {
-  specs: ['interest.spec.js'],
+  specs: ['payment.spec.js'],
   directConnect: true,
   capabilities: {
     browserName: 'chrome'

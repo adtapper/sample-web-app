@@ -1,6 +1,6 @@
 const proc = require('protractor');
 
-class InterestPage {
+class PaymentPage {
     constructor() {
         this.amountInput = proc.element(proc.by.id('loan'));
         this.termInput = proc.element(proc.by.id('term'));
@@ -23,4 +23,4 @@ class InterestPage {
     }
 }
 
-exports.InterestPage = InterestPage;
+exports.PaymentPage = PaymentPage;
