@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import * as fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 export const App = () => {
   const [payment, setPayment] = useState('$0');
@@ -8,15 +8,21 @@ export const App = () => {
   const [rate, setRate] = useState(0.0);
 
   const updatePrincipal = (event) => {
-    setPrincipal(event.target.value);
+    const number = Number(event.target.value); 
+    if (!Number.isNaN(number) && number >= 0) {
+      setPrincipal(number);
+    }
   }
 
   const updateTerm = (event) => {
-    setTerm(event.target.value);
+    setTerm(Number(event.target.value));
   }
 
   const updateRate = (event) => {
-    setRate(event.target.value / 100);
+    const number = Number(event.target.value / 100);
+    if (!Number.isNaN(number) && number >= 0) {
+      setRate(number);
+    }
   }
 
   const calculateInterest = () => {
@@ -41,13 +47,13 @@ export const App = () => {
         <h1>Mortgage Calculator</h1>
         <div id='container'>
           <p id='label'>Monthly Payment:</p>
-          <p>{payment}</p>
+          <p id='payment'>{payment}</p>
         </div>
         <form>
           <label>Loan Amount</label>
-          <input id = 'loan' type="number" maxLength="7" placeholder="0" min="0" onChange={updatePrincipal}></input>
+          <input id = 'loan' type="number" maxLength="7" placeholder="0" min="0" value={principal} onChange={updatePrincipal}></input>
           <label>Loan Term</label>
-          <select onChange={updateTerm}>
+          <select id = 'term' onChange={updateTerm}>
               <option value="10">10 year fixed</option>
               <option value="15">15 year fixed</option>
               <option value="20">20 year fixed</option>
