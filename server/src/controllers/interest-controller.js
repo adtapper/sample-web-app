@@ -4,7 +4,7 @@ class InterestController {
             return res.send({'payment': 0});
         } else {
             const monthlyRate = req.body.rate / 12;
-            const paymentCount = req.body.years * 12;
+            const paymentCount = req.body.term * 12;
             const payment = req.body.principal * ((monthlyRate * Math.pow((1 + monthlyRate), paymentCount)) / (Math.pow((1 + monthlyRate), paymentCount) - 1))
             return res.send({'payment': Math.round(payment * 100) / 100});
         }

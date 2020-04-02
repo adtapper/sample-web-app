@@ -7,7 +7,7 @@ describe('InterestController', () => {
             const req = {
                 body: {
                   rate: -0.041,
-                  years: 30,
+                  term: 30,
                   principal: 240000
                 }
             };
@@ -19,7 +19,7 @@ describe('InterestController', () => {
             const req = {
                 body: {
                   rate: 0.041,
-                  years: 30,
+                  term: 30,
                   principal: -240000
                 }
             };
@@ -31,7 +31,7 @@ describe('InterestController', () => {
             const req = {
                 body: {
                   rate: -0.041,
-                  years: 30,
+                  term: 30,
                   principal: -240000
                 }
             };
@@ -51,7 +51,7 @@ describe('InterestController', () => {
             const req = {
                 body: {
                     rate: .041,
-                    years: term,
+                    term: term,
                     principal: 240000
                 }
             };
@@ -69,7 +69,7 @@ describe('InterestController', () => {
             const req = {
                 body: {
                     rate: .041,
-                    years: 30,
+                    term: 30,
                     principal: 240000 * multiplier
                 }
             };

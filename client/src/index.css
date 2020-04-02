@@ -9,7 +9,7 @@ body {
     width: 100%;
 }
 
-div {
+#container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +17,16 @@ div {
     height: 100%;
 }
 
-label, input {
+label, input, select {
     width: 100%;
     display:block;
 }
 
-label, button {
+label, #button {
     margin-top: 5%;
+}
+
+#label {
+    margin-right: 4%;
+    font-weight: bold;
 }

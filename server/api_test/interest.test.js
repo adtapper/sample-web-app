@@ -6,13 +6,13 @@ const request = supertest(app);
 
 describe('Interest Tests', () => {
     it('validRateTermAndPrincipal_paymentReturned', async () => {
-        const response = await request.post('/v1/interest').send({rate: 0.041, years: 30, principal: 240000});
+        const response = await request.post('/interest').send({rate: 0.041, term: 30, principal: 240000});
         
         expect(response.body).toEqual({'payment': 1159.68});
     });
 
     it('negativePrincipalAndInterestRate_zeroPaymentCalculated', async () => {
-        const response = await request.post('/v1/interest').send({rate: -0.041, years: 30, principal: -240000});
+        const response = await request.post('/interest').send({rate: -0.041, term: 30, principal: -240000});
         
         expect(response.body).toEqual({'payment': 0});
     });
