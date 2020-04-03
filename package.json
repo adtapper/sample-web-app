@@ -12,7 +12,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "start-server": "node server/src/start.js",
-    "test": "jest \".*.test.js\" && protractor client/ui-test/conf.js",
+    "test": "jest \".*.test.js\" --verbose && protractor client/ui-test/conf.js",
     "update-driver": "webdriver-manager update"
   },
   "keywords": [],
